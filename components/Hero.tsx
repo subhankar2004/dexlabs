@@ -4,8 +4,12 @@ import { cn } from "@/lib/utils";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
+import { FlipWords } from "./ui/FlipWords";
 
 const Hero = () => {
+  
+  const words = ["Smart Strategies", "Real Progress", "Innovative Solutions"];
+  
   return (
     <div className="relative pb-20 pt-36">
       {/* Spotlights */}
@@ -22,37 +26,39 @@ const Hero = () => {
       </div>
 
       {/* Grid BG */}
-      {/* FIX APPLIED HERE:
-         1. Removed 'absolute inset-0' and 'w-full'.
-         2. Added 'h-screen' and 'w-screen' (forces full viewport width).
-         3. Added 'absolute top-0 left-1/2 -translate-x-1/2' (centers it relative to screen, ignoring parent width).
-      */}
       <div className="h-screen w-screen dark:bg-black-100 bg-white absolute top-0 left-1/2 -translate-x-1/2 flex items-center justify-center">
         <div
           className={cn(
             "absolute inset-0 w-full h-full",
-            "[background-size:80px_80px]",
+            "bg-size-[80px_80px]",
             "bg-[linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
             "dark:bg-[linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
           )}
         />
-
-        <div className="pointer-events-none absolute inset-0 w-full h-full flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black-100" />
+        <div className="pointer-events-none absolute inset-0 w-full h-full flex items-center justify-center bg-white mask-[radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black-100" />
       </div>
 
       {/* Content */}
       <div className="flex justify-center relative my-20 z-10 ">
         <div className="max-w-[89vh] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
+          
+          <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80 mb-4">
             Get Started With us !!
           </h2>
-          <TextGenerateEffect
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Smart Strategies  Real Growth !"
-          />
+          
+          {/* Flip Words Container */}
+          
+          <div className="text-center text-4xl md:text-6xl lg:text-7xl font-bold mb-8">
+            <FlipWords
+              words={words} 
+              className="text-center text-blue-500  "
+            /> 
+          </div>
+          
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi ! We are DexLabs , a Web and Content Creation Serving Agency.
           </p>
+          
           <a href="#">
             <MagicButton
               title="Contact us!"
