@@ -11,9 +11,6 @@ import {
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 
-/* -------------------------------------------------------------------------- */
-/*                                   TYPES                                    */
-/* -------------------------------------------------------------------------- */
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -51,9 +48,6 @@ interface MobileNavMenuProps {
   onClose?: () => void;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                   NAVBAR                                   */
-/* -------------------------------------------------------------------------- */
 
 export const Navbar = ({ children, className }: NavbarProps) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -81,9 +75,6 @@ export const Navbar = ({ children, className }: NavbarProps) => {
   );
 };
 
-/* -------------------------------------------------------------------------- */
-/*                                  NAV BODY                                  */
-/* -------------------------------------------------------------------------- */
 
 export const NavBody = ({ children, className, visible }: NavBodyProps) => {
   return (
@@ -109,9 +100,6 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
   );
 };
 
-/* -------------------------------------------------------------------------- */
-/*                                 NAV ITEMS                                  */
-/* -------------------------------------------------------------------------- */
 
 export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
@@ -145,9 +133,6 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   );
 };
 
-/* -------------------------------------------------------------------------- */
-/*                               MOBILE NAV ROOT                              */
-/* -------------------------------------------------------------------------- */
 
 export const MobileNav = ({ children, className, visible }: MobileNavProps) => (
   <motion.div
@@ -167,9 +152,6 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => (
   </motion.div>
 );
 
-/* -------------------------------------------------------------------------- */
-/*                                MOBILE HEADER                               */
-/* -------------------------------------------------------------------------- */
 
 export const MobileNavHeader = ({
   children,
@@ -180,9 +162,6 @@ export const MobileNavHeader = ({
   </div>
 );
 
-/* -------------------------------------------------------------------------- */
-/*                               MOBILE NAV MENU                               */
-/* -------------------------------------------------------------------------- */
 
 export const MobileNavMenu = ({
   children,
@@ -206,9 +185,6 @@ export const MobileNavMenu = ({
   </AnimatePresence>
 );
 
-/* -------------------------------------------------------------------------- */
-/*                                  TOGGLE                                    */
-/* -------------------------------------------------------------------------- */
 
 export const MobileNavToggle = ({
   isOpen,
@@ -223,20 +199,14 @@ export const MobileNavToggle = ({
     <IconMenu2 className="text-black dark:text-white" onClick={onClick} />
   );
 
-/* -------------------------------------------------------------------------- */
-/*                                   LOGO                                     */
-/* -------------------------------------------------------------------------- */
 
 export const NavbarLogo = () => (
   <a href="/" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1">
-    <Image src="/dexlab.png" alt="DexLabs logo" width={32} height={32} />
+    <Image src="/dexlab.png" alt="DexLabs logo" width={64} height={64} />
     <span className="font-medium text-black dark:text-white">DexLabs</span>
   </a>
 );
 
-/* -------------------------------------------------------------------------- */
-/*                              SIMPLE <a> BUTTON                              */
-/* -------------------------------------------------------------------------- */
 
 type NavbarButtonProps = {
   href: string;
