@@ -13,8 +13,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Dexlabs",
-  description: "Web and Content Creation Serving Agency.",
+  title: "DexLabs",
+  description: "Digital Marketing Agency",
 };
 
 export default function RootLayout({

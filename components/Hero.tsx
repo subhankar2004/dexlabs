@@ -11,15 +11,15 @@ const Hero = () => {
       {/* ── First screen: hero content ── */}
       <div className="relative z-10 flex flex-col justify-center min-h-screen pl-[18vw] pr-[8vw] pt-28 pb-20">
         <h1
-          className="text-white font-extrabold leading-[1.12] tracking-tight 
+          className="text-white font-bold leading-[1.12] tracking-tight 
              lg:max-w-none max-w-[640px]"
           style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}
         >
           <span className="block lg:whitespace-nowrap">
-            We build data-driven content systems
+            Where Brands Are Born,
           </span>
           <span className="block lg:whitespace-nowrap">
-            that turn passive scrollers into paying customers
+            Built, and Blown Up Online
           </span>
           {/* <GlideUpSpan delay={0}>
             We build data-driven content systems
@@ -35,17 +35,17 @@ const Hero = () => {
               lg:whitespace-nowrap lg:max-w-none max-w-md"
         >
           <span>
-          Through viral content strategy, optimized ads, and conversion funnels
+             We design killer branding, build high-converting websites & apps, and create viral content that actually drives sales.
           </span>
         </p>
 
         {/* CTA Buttons */}
         <div className="mt-8 flex flex-row gap-3 items-center flex-wrap">
-          <button className="h-10 px-5 border border-white bg-white text-black text-[0.62rem] font-bold tracking-[0.15em] uppercase transition-all duration-200 hover:bg-transparent hover:text-white">
-            Book a free strategy call
+          <button className="h-10 px-5 border border-white bg-white text-black text-[0.62rem] font-bold tracking-[0.15em] uppercase transition-all duration-200 hover:bg-transparent hover:text-white rounded-[5px]">
+          Book a free strategy call
           </button>
 
-          <button className="h-10 px-5 border border-white/30 bg-transparent text-white text-[0.62rem] font-semibold tracking-[0.13em] uppercase transition-all duration-200 hover:border-white/60 hover:bg-white hover:text-black">
+          <button className="h-10 px-5 border border-white/30 bg-transparent text-white text-[0.62rem] font-semibold tracking-[0.13em] uppercase transition-all duration-200 hover:border-white/60 hover:bg-white hover:text-black rounded-[5px]">
             See our work
           </button>
         </div>

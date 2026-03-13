@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 
-const BRAND_NAME = "dexlabs";
-const BRAND_DOT_COLOR = "#F5C518";
+const BRAND_NAME = "DexLabs";
+const BRAND_DOT_COLOR = "#9c05ed";
 const LOADER_BG = "#0a0a0a";
 const LOADER_TEXT_COLOR = "#ffffff";
 const CHAR_STAGGER = 0.06;
@@ -120,9 +120,9 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
             style={{
               display: "flex",
               alignItems: "baseline",
-              fontFamily: "'Inter', 'Helvetica Neue', sans-serif",
+              fontFamily: "Outfit, sans-serif",
               fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
-              fontWeight: 400,
+              fontWeight: 500,
               letterSpacing: "-0.01em",
               color: LOADER_TEXT_COLOR,
               userSelect: "none",
