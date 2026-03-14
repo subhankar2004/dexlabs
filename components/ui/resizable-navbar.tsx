@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 
+
 interface NavbarProps {
   children: React.ReactNode;
   className?: string;
@@ -46,6 +47,7 @@ interface MobileNavMenuProps {
   onClose?: () => void;
 }
 
+
 export const Navbar = ({ children, className }: NavbarProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll({ target: ref });
@@ -67,6 +69,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     </div>
   );
 };
+
 
 export const NavBody = ({ children, className, visible }: NavBodyProps) => {
   return (
@@ -109,6 +112,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
   );
 };
 
+
 export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
 
@@ -142,6 +146,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     </motion.div>
   );
 };
+
 
 export const MobileNav = ({ children, className, visible }: MobileNavProps) => (
   <motion.div
@@ -182,11 +187,16 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => (
   </motion.div>
 );
 
-export const MobileNavHeader = ({ children, className }: MobileNavHeaderProps) => (
+
+export const MobileNavHeader = ({
+  children,
+  className,
+}: MobileNavHeaderProps) => (
   <div className={cn("flex w-full items-center justify-between", className)}>
     {children}
   </div>
 );
+
 
 export const MobileNavMenu = ({
   children,
@@ -214,6 +224,7 @@ export const MobileNavMenu = ({
   </AnimatePresence>
 );
 
+
 export const MobileNavToggle = ({
   isOpen,
   onClick,
@@ -227,26 +238,14 @@ export const MobileNavToggle = ({
     <IconMenu2 className="text-white/80" onClick={onClick} />
   );
 
+
 export const NavbarLogo = () => (
-  <a
-    href="/"
-    className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1"
-  >
+  <a href="/" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1">
     <Image src="/dexlab.png" alt="DexLabs logo" width={54} height={54} />
-    <span className="text-[20px] font-semibold tracking-tight text-white">
-      DexLabs
-    </span>
+    <span className="font-medium text-black dark:text-white">Dexlabs</span>
   </a>
 );
 
-/*export const NavbarLogo = () => (
-  <a
-    href="/"
-    className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1"
-  >
-    <Image src="/dexlabs-nav.png" alt="DexLabs logo" width={110} height={100} />
-  </a>
-);*/
 
 type NavbarButtonProps = {
   href: string;
