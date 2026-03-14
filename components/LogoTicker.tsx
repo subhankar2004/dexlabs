@@ -5,11 +5,9 @@ import { motion, useAnimationControls } from "framer-motion";
 
 const BASE_LOGOS: string[] = [
   "/swiftys.png",
-  "/swiftys.png",
-  "/swiftys.png",
-  "/swiftys.png",
-  "/swiftys.png",
-  "/swiftys.png",
+  "/orly.png",
+  "/umd.png",
+  "/nex.png",
 ];
 
 const TICKER_LOGOS = [...BASE_LOGOS, ...BASE_LOGOS];
